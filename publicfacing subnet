@@ -1,0 +1,11 @@
+## Creates a public facing subnet in the namespace vpc.
+apiVersion: crd.nsx.vmware.com/v1alpha1
+kind: Subnet
+metadata:
+  annotations: {}
+  name: public-subnet-new
+  namespace: vmservice
+spec:
+  subnetDHCPConfig: {mode: "DHCPServer"}
+  accessMode: Public
+  ipv4SubnetSize: 32
