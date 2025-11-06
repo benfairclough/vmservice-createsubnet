@@ -1,0 +1,12 @@
+##Creates a private subnet in the namespace vpc
+
+apiVersion: crd.nsx.vmware.com/v1alpha1
+kind: Subnet
+metadata:
+  annotations: {}
+  name: private-subnet
+  namespace: vmservice
+spec:
+  subnetDHCPConfig: {mode: "DHCPServer"}
+  accessMode: Private
+  ipv4SubnetSize: 32
